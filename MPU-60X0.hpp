@@ -201,9 +201,9 @@ public:
 	/*
 	 * REG SMPLRT_DIV:
 	 * Specify the divider from the gyroscope output rate used to generate the Sample Rate for the MPU-60X0.<br>
-	 *       Sample Rate = Gyroscope Output Rate / (1 + SMPLRT_DIV)<br>
-	 *       where Gyroscope Output Rate = 8kHz when the DLPF is disabled (DLPF_CFG = 0 or 7), and 1kHz when the DLPF is
-	 *       enabled (see Register 26). 
+	 * Sample Rate = Gyroscope Output Rate / (1 + SMPLRT_DIV)<br>
+	 * where Gyroscope Output Rate = 8kHz when the DLPF is disabled (DLPF_CFG = 0 or 7), and 1kHz when the DLPF is
+	 * enabled (see Register 26).
 	 */
 	struct SMPLRT_DIV
 	{
@@ -240,7 +240,7 @@ public:
 	/*
 	 * REG CONFIG:
 	 * This register configures the external Frame Synchronization (FSYNC) pin sampling and
-	 *       the Digital Low Pass Filter (DLPF) setting for both the gyroscopes and accelerometers. 
+	 * the Digital Low Pass Filter (DLPF) setting for both the gyroscopes and accelerometers.
 	 */
 	struct CONFIG
 	{
@@ -255,8 +255,8 @@ public:
 		/* Bits EXT_SYNC_SET: */
 		/*
 		 * An external signal connected to the FSYNC pin can be sampled by configuring EXT_SYNC_SET.<br>
-		 *           Signal changes to the FSYNC pin are latched so that short strobes may be captured. The latched FSYNC signal will be sampled at the Sampling Rate, as defined in register 25. After sampling, the latch will reset to the current FSYNC signal state.<br>
-		 *           The sampled value will be reported in place of the least significant bit in a sensor data register determined by the value of EXT_SYNC_SET according to the following table. 
+		 * Signal changes to the FSYNC pin are latched so that short strobes may be captured. The latched FSYNC signal will be sampled at the Sampling Rate, as defined in register 25. After sampling, the latch will reset to the current FSYNC signal state.<br>
+		 * The sampled value will be reported in place of the least significant bit in a sensor data register determined by the value of EXT_SYNC_SET according to the following table.
 		 */
 		struct EXT_SYNC_SET
 		{
